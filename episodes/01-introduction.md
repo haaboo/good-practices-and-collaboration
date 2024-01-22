@@ -16,10 +16,6 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-Computers are now essential in all branches of science.
-We use computers to collect, analyze, and store data, to collaborate, and to write manuscripts.
-Yet most researchers are never taught the equivalent of basic lab skills for research computing.
-
 This lesson covers a set of good computing practices that **every** researcher can adopt,
 regardless of computational skill.
 Informally, it teaches how to not lose your stuff, and generally how to be more efficient.
@@ -67,11 +63,6 @@ Consider the entire data life cycle of a project, as well as the actual analysis
 
 ## Challenges in data-heavy biology
 
-For example, consider biology.
-
-![](fig/ew-intro.png){alt='This image shows the many different levels of data that biologists might work with. On the highest level, they work with organisms, shown in the image are a wasp, a tree, and a bacteria. On an intermediate level, they may collect raw data from these organisms. Shown in the image are a picture of dividing yeast cells, a western blot, and a floppy disk containing text data. On the final level, they will have visualisations of the raw data. Shown in the image are a picture of dividing cells with fluorescence at the boundary, a bar plot, and a cartoon of gene transcription.'}
-
-Biologists study organisms, and have to deal with many kinds of data.
 In biology, as in other sciences:
 
 - All your raw data are digital files

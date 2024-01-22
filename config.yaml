@@ -12,7 +12,7 @@
 carpentry: 'lab'
 
 # Overall title for pages.
-title: 'Good Enough Practices in Scientific Computing'
+title: 'Good Enough Practices in Scientific Computing & Collaboration'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: '2020-08-24'
@@ -28,13 +28,13 @@ life_cycle: 'stable'
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/carpentries-lab/good-enough-practices'
+source: 'https://github.com/csiro-data-school/good-practices-and-collaboration'
 
 # Default branch of your lesson
 branch: 'main'
 
 # Who to contact if there are any issues
-contact: 'Edward.Wallace@ed.ac.uk'
+contact: 'andrew.spriggs@csiro.au'
 
 # Navigation ------------------------------------------------
 #
@@ -77,6 +77,5 @@ profiles:
 # sandpaper and varnish versions) should live
 
 
-url: 'https://carpentries-lab.github.io/good-enough-practices'
-analytics: carpentries
+url: 'https://csiro-data-school.github.io/good-practices-and-collaboration'
 lang: en

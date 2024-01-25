@@ -53,7 +53,7 @@ There are extended discussions about research software at the [Software Sustaina
 
 **Discussion**
 
-What can go wrong with writing research code?
+What can go wrong when trying to reuse research code?
 
 :::::::::::::::  solution
 
@@ -239,8 +239,7 @@ count_fruit_on_island = function(fruit type, island)
     return total fruit
 ```
 
-Write the commands to call this function to count how many coconuts there are on Sam's island, how many cherries
-there are on Sam's island, and how many cherries there are on Charlie's island.
+Write a pseudocode command to call this function to count how many coconuts there are on Sam's island.
 
 Write a pseudocode for loop like the one above that uses this function to count all the cherries on every island.
 
@@ -248,14 +247,12 @@ Write a pseudocode for loop like the one above that uses this function to count 
 
 ## Solution
 
+To count Sam's island's coconuts:
 ```source
 sams coconuts = count_fruit_on_island(coconuts, Sam's island)
-sams cherries = count_fruit_on_island(cherries, Sam's island)
-charlies cherries = count_fruit_on_island(cherries, Charlie's island)
 ```
 
 To count all the cherries on every island:
-
 ```source
 total cherries = 0
 for every island
@@ -328,13 +325,13 @@ What are the most meaningful names for `functionName` and `variableName`? Choose
 
 1. processFunction - incorrect, too vague
 2. computeCubesOfThird - incorrect, doesn't imply every third in sequence
-3. cubeEveryThirdNumberInASequence - incorrect, too long
+3. cubeEveryThirdNumberInASequence - maybe, but too long
 4. **cubeEachThird - correct, short and includes information on the data and calculation performed**
-5. 3rdCubed - incorrect, bad practice to put a number at the beginning of a function name (and not allowed by some programming languages)
+5. 3rdCubed - incorrect, bad practice to put a number at the beginning of a function name (not allowed by some programming languages)
 
 `variableName`
 
-1. arrayOfNumbersToBeCubed - incorrect, too long
+1. arrayOfNumbersToBeCubed - maybe, but too long
 2. input - incorrect, too vague
 3. **numericSequence - correct, short and included information about the type of input**
 4. S - incorrect, too vague

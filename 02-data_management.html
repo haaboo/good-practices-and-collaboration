@@ -287,7 +287,7 @@ access and cite it</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Data Management</h1>
-        <p>Last updated on 2023-09-07 |
+        <p>Last updated on 2024-01-28 |
         
         <a href="https://github.com/csiro-data-school/good-practices-and-collaboration/edit/main/episodes/02-data_management.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -358,7 +358,7 @@ management? Write down 2 issues in the collaborative document.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul><li>Data loss</li>
 <li>Data corruption, making data unusable</li>
@@ -401,7 +401,7 @@ organization)</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2">Show me the solution</h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ul><li>Commercial cloud service: it depends. Where are the servers located?
 How secure is it? How reliable is it? Do you have to pay for the service
@@ -442,16 +442,15 @@ should avoid making local copies of large, stable databases. In that
 case, record the exact procedure used to obtain the raw data, as well as
 any other pertinent information, such as an official version number or
 the date of download.</p>
-<p>If external hard drives are used, store them off-site of the original
-location. Universities often have their own data storage solutions, so
-it is worthwhile to consult with your local Information Technology (IT)
-group or library. Alternatively cloud computing resources, like Amazon
-Simple Storage Service (Amazon S3), Google Cloud Storage or <a href="https://azure.microsoft.com/en-us/services/storage/" class="external-link">Azure</a> are
-reasonably priced and reliable. For large data sets, where storage and
-transfer can be expensive and time-consuming, you may need to use
-incremental backup or specialized storage systems, and people in your
-local IT group or library can often provide advice and assistance on
-options at your university or organization as well.</p>
+<p>In CSIRO, both raw data and final project data can (and should) be
+backed up on the <a href="https://data.csiro.au/" class="external-link">Data Access Portal</a>
+(it can host internal-only data copies as well as publicly published
+data). We also have project-allocated Bowen storage and HPC-linked
+high-volume storage paths that IM&amp;T can provide use of, but check if
+any automated backup schedules are in place.</p>
+<p>Also, remember not to place data in Git repositories. These are for
+code, scripts, notes, documentation, etc., but not data. Good data
+curation practices are different to good code curation practices.</p>
 </section><section id="working-with-sensitive-data"><h2 class="section-heading">Working with sensitive data<a class="anchor" aria-label="anchor" href="#working-with-sensitive-data"></a>
 </h2>
 <hr class="half-width"><p>Identify whether your project will work with sensitive data - by
@@ -472,22 +471,15 @@ sensitive data (for example, laws like the General Data Protection
 Regulation, known as the GDPR). These laws vary between countries and
 may affect whether you can share information between collaborators in
 different countries.</p>
+<p>You should have completed some compulsory online training on working
+with sensitive data within CSIRO.<br>
+The <a href="https://ardc.edu.au/resource-hub/working-with-sensitive-data/" class="external-link">Australian
+Research Data Commons <span class="math inline">\(ARDC\)</span></a>
+provides some additional guides for working with sensitive data within
+Australia.</p>
 </section><section id="create-the-data-you-wish-to-see-in-the-world"><h2 class="section-heading">Create the data you wish to see in the world<a class="anchor" aria-label="anchor" href="#create-the-data-you-wish-to-see-in-the-world"></a>
 </h2>
-<hr class="half-width"><div id="discussion-2-minutes" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<div id="discussion-2-minutes" class="callout-inner">
-<h3 class="callout-title">Discussion (2 minutes)<a class="anchor" aria-label="anchor" href="#discussion-2-minutes"></a>
-</h3>
-<div class="callout-content">
-<p>Which file formats do you store your data in? Enter your answers in
-the collaborative document.</p>
-</div>
-</div>
-</div>
-<p><em>Filenames</em>: Store especially useful metadata as part of the
+<hr class="half-width"><p><em>Filenames</em>: Store especially useful metadata as part of the
 filename itself, while keeping the filename regular enough for easy
 pattern matching. For example, a filename like
 <code>2016-05-alaska-b.csv</code> makes it easy for both people and
@@ -527,16 +519,15 @@ linkages between tables (e.g. sample identifiers are recorded in the
 sequencing experiment metadata)</li>
 </ul></section><section id="create-analysis-friendly-data"><h2 class="section-heading">Create analysis-friendly data<a class="anchor" aria-label="anchor" href="#create-analysis-friendly-data"></a>
 </h2>
-<hr class="half-width"><div id="discussion-2-minutes-1" class="callout discussion">
+<hr class="half-width"><div id="discussion-2-minutes" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div id="discussion-2-minutes-1" class="callout-inner">
-<h3 class="callout-title">Discussion (2 minutes)<a class="anchor" aria-label="anchor" href="#discussion-2-minutes-1"></a>
+<div id="discussion-2-minutes" class="callout-inner">
+<h3 class="callout-title">Discussion (2 minutes)<a class="anchor" aria-label="anchor" href="#discussion-2-minutes"></a>
 </h3>
 <div class="callout-content">
-<p>Which of the table layouts is analysis friendly? Discuss. Enter your
-answers in the collaborative document. <img src="fig/wilson-tidy-data.png" alt="Two tables of data appear side-by-side. The table on the left has columns named site, 1999, and 2000. The table on the right has columns named site, year, and cases." class="figure"></p>
+<p>Which of the table layouts is analysis friendly? Discuss. <img src="fig/wilson-tidy-data.png" alt="Two tables of data appear side-by-side. The table on the left has columns named site, 1999, and 2000. The table on the right has columns named site, year, and cases." class="figure"></p>
 </div>
 </div>
 </div>
@@ -583,7 +574,8 @@ set of boundary coordinates.</p>
 <h3 class="callout-title">How, when and why do you document?<a class="anchor" aria-label="anchor" href="#how-when-and-why-do-you-document"></a>
 </h3>
 <div class="callout-content">
-<p>As much as possible, always and to help you future self.</p>
+<p>As much as possible, always and to <strong>help you future
+self</strong>.</p>
 </div>
 </div>
 </div>
@@ -616,9 +608,10 @@ minutes)<a class="anchor" aria-label="anchor" href="#sharing-your-data-with-the-
 data?</p>
 <ul><li>Personal/lab web-site</li>
 <li>GitHub</li>
-<li>General repo (i.e.: Zenodo, Data Dryad, etc.)</li>
-<li>Community specific repo (i.e.: ArrayExpress, SRA, EGA, PRIDE,
+<li>General data repo (i.e.: Zenodo, Data Dryad, etc.)</li>
+<li>Community specific repo (i.e.: ArrayExpress, NCBI, SRA, EGA, PRIDE,
 etc.)</li>
+<li>DAP</li>
 </ul></div>
 </div>
 </div>
@@ -627,35 +620,38 @@ etc.)</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3">Show me the solution</h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
-<ul><li>Personal/lab web-site: this is not the best place to store your data
+<ul><li>Personal/lab web-site: not the best place to store your data
 long-term. These websites are not hosted long term. You can have a link
 to the repo, though.</li>
 <li>GitHub: in itself it is not proper for sharing your data as it can
-be modified. However, a snapshot of a Github repository can be stored in
-Zenodo and be issued a DOI.</li>
-<li>General repo (i.e.: Zenodo, Data Dryad, etc.): good option to
+be modified. A snapshot of a Github repository can be stored in a
+service like Zenodo or the DAP and be issued a DOI.</li>
+<li>General data repo (i.e.: Zenodo, Data Dryad, etc.): good option to
 deposit data that does not fit in a specific repository. Best if the
 service is non-commerical, has long-termdata archival and issues DOIs,
-such as Zenodo.</li>
-<li>Community specific repo (i.e.: ArrayExpress, SRA, EGA, PRIDE, etc.):
-best option to share your data, if your research community has come up
-with a sustainable long-term repository.</li>
+such as Zenodo. But DAP is preferred for CSIRO employees.</li>
+<li>Community specific repo (i.e.: ArrayExpress, NCBI, SRA, EGA, PRIDE,
+etc.): good option, if your research community has come up with a
+sustainable long-term repository for a certain data type.</li>
+<li>DAP: generally best option for any data sharing for CSIRO
+employees.</li>
 </ul></div>
 </div>
 </div>
 </div>
 <p>Your data is as much a product of your research as the papers you
-write, and just as likely to be useful to others (if not more so). Sites
-such as <a href="https://datadryad.org" class="external-link">Dryad</a> and <a href="https://zenodo.org" class="external-link">Zenodo</a> allow others to find your work, use
-it, and cite it; we discuss licensing in the episode on collaboration
-[04-collaboration]. Follow your research community’s standards for how
-to provide metadata. Note that there are two types of metadata: metadata
-about the dataset as a whole and metadata about the content within the
-dataset. If the audience is humans, write the metadata (the README file)
-for humans. If the audience includes automatic metadata harvesters, fill
-out the formal metadata and write a good README file for the humans [<a href="https://github.com/swcarpentry/good-enough-practices-in-scientific-computing/issues/3#issuecomment-157410442" class="external-link">wickes2015</a>].</p>
+write, and just as likely to be useful to others (if not more so).
+Services such as the <a href="https://data.csiro.au/" class="external-link">DAP</a> can allow
+others to find your work, use it, and cite it; we discuss licensing in
+the episode on collaboration [04-collaboration]. Follow your research
+community’s standards for how to provide metadata. Note that there are
+two types of metadata: metadata about the dataset as a whole and
+metadata about the content within the dataset. If the audience is
+humans, write the metadata (the README file) for humans. If the audience
+includes automatic metadata harvesters, fill out the formal metadata and
+write a good README file for the humans [<a href="https://github.com/swcarpentry/good-enough-practices-in-scientific-computing/issues/3#issuecomment-157410442" class="external-link">wickes2015</a>].</p>
 <div id="what-is-a-doi" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -668,7 +664,10 @@ out the formal metadata and write a good README file for the humans [<a href="ht
 used to identify objects uniquely.</li>
 <li>Data with a persistent DOI can be found even when your lab website
 dies.</li>
-<li>doi-issuing repositories include: zenodo, figshare, dryad.</li>
+<li>doi-issuing repositories include: zenodo, figshare, dryad and the
+DAP.</li>
+<li>e.g. <a href="https://doi.org/10.25919/t1ad-8k76" class="external-link">https://doi.org/10.25919/t1ad-8k76</a>
+</li>
 </ul></div>
 </div>
 </div>
@@ -696,6 +695,8 @@ publishers or institutional websites.</li>
 repository for research data that takes care of long-term preservation
 and good archival practices, while researchers can share, keep control
 of, and get recognition for their data.</li>
+<li>The DAP (<a href="https://data.csiro.au/" class="external-link">https://data.csiro.au/</a>): CSIRO’s own
+data repository.</li>
 </ul></div>
 </div>
 </div>
@@ -711,17 +712,16 @@ information should be included but the main compoments of a DMP are:</p>
 <li>Information on how data can be accessed, shared and re-used</li>
 <li>Information on how data will be stored and managed, including
 long-term storage and maintenance after your project is complete</li>
-</ul><div id="discussion-2-minutes-2" class="callout challenge">
+</ul><div id="discussion-2-minutes-1" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="discussion-2-minutes-2" class="callout-inner">
-<h3 class="callout-title">Discussion (2 minutes)<a class="anchor" aria-label="anchor" href="#discussion-2-minutes-2"></a>
+<div id="discussion-2-minutes-1" class="callout-inner">
+<h3 class="callout-title">Discussion (2 minutes)<a class="anchor" aria-label="anchor" href="#discussion-2-minutes-1"></a>
 </h3>
 <div class="callout-content">
 <p>Aside from being a requirement, there are many benefits of writing a
-DMP to researchers. What sort of benefits do you think there are? Enter
-your answers in the collaborative document.</p>
+DMP to researchers. What sort of benefits do you think there are?</p>
 </div>
 </div>
 </div>
@@ -730,7 +730,7 @@ your answers in the collaborative document.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4">Show me the solution</h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <ul><li>Find and understand data easily</li>
 <li>Allows continuity of work when colleagues leave or join the lab</li>
@@ -748,6 +748,9 @@ it may be helpful to work on it together to identify any major
 considerations. Often research institutions provide support for DMPs,
 e.g. through library services or a data steward.</p>
 <p>More resources on data management plans are available at <a href="https://dmponline.dcc.ac.uk" class="external-link">DMP online</a>.</p>
+<p>The CSIRO’s <a href="https://rdp.csiro.au/" class="external-link">Research Data Planner</a>
+can help you prepare a data management plan. It will be covered in
+detail next week.</p>
 <div id="whats-your-next-step-in-data-management" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -875,8 +878,8 @@ findable and accessible by the broader community</li>
   "url": "https://csiro-data-school.github.io/good-practices-and-collaboration/02-data_management.html",
   "identifier": "https://csiro-data-school.github.io/good-practices-and-collaboration/02-data_management.html",
   "dateCreated": "2020-08-24",
-  "dateModified": "2023-09-07",
-  "datePublished": "2024-01-23"
+  "dateModified": "2024-01-28",
+  "datePublished": "2024-01-28"
 }
 
   </script><script>

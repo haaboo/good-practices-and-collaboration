@@ -177,9 +177,9 @@
       <div class="accordion-body">
         <ul><li><a href="#create-an-overview-of-your-project">Create an overview of your project</a></li>
 <li><a href="#describe-how-to-contribute-to-the-project">Describe how to contribute to the project</a></li>
-<li><a href="#create-a-shared-to-do-list">Create a shared “to-do” list</a></li>
 <li><a href="#decide-on-communication-strategies">Decide on communication strategies</a></li>
 <li><a href="#collaborations-with-sensitive-data">Collaborations with sensitive data</a></li>
+<li><a href="#create-a-shared-to-do-list">Create a shared “to-do” list</a></li>
 <li><a href="#make-the-license-explicit">Make the license explicit</a></li>
 <li><a href="#make-the-project-citable">Make the project citable</a></li>
 <li><a href="#recommended-resources">Recommended resources</a></li>
@@ -283,7 +283,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Collaboration</h1>
-        <p>Last updated on 2023-09-23 |
+        <p>Last updated on 2024-01-28 |
         
         <a href="https://github.com/csiro-data-school/good-practices-and-collaboration/edit/main/episodes/04-collaboration.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -352,7 +352,7 @@ challenges<a class="anchor" aria-label="anchor" href="#collaboration-opportuniti
   <h3 class="accordion-header" id="headingSpoiler1">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Suggestions</h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>How collaboration can help:</p>
 <ul><li>Collaboration brings other ideas and perspectives on your
@@ -435,7 +435,7 @@ README</a></p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>This Data Project README:</p>
 <ul><li>Contains a DOI</li>
@@ -459,15 +459,6 @@ paper though)</li>
 </div>
 </div>
 </div>
-</section><section id="create-a-shared-to-do-list"><h2 class="section-heading">Create a shared “to-do” list<a class="anchor" aria-label="anchor" href="#create-a-shared-to-do-list"></a>
-</h2>
-<hr class="half-width"><p>This can be a plain text file called something like
-<code>notes.txt</code> or <code>todo.txt</code>, or you can use sites
-such as GitHub or Bitbucket to create a new <em>issue</em> for each
-to-do item. (You can even add labels such as “low hanging fruit” to
-point newcomers at issues that are good starting points.) Whatever you
-choose, describe the items clearly so that they make sense to
-newcomers.</p>
 </section><section id="decide-on-communication-strategies"><h2 class="section-heading">Decide on communication strategies<a class="anchor" aria-label="anchor" href="#decide-on-communication-strategies"></a>
 </h2>
 <hr class="half-width"><p>Make explicit decisions about (and publicize where appropriate) how
@@ -476,6 +467,12 @@ external users / collaborators. This includes the location and
 technology for email lists, chat channels, voice / video conferencing,
 documentation, and meeting notes, as well as which of these channels
 will be public or private.</p>
+<p>Supported tools within CSIRO include <a href="https://confluence.csiro.au/" class="external-link">Confluence</a>, for wiki-style
+shared documentation, and Microsoft Teams, for online discussions, video
+conferencing, file sharing and more.</p>
+<p>Not supported, but worth knowing of is <a href="https://miro.com/" class="external-link">Miro</a>, which allows creating a shared,
+online whiteboard, where multiple people may be building up notes,
+diagrams, graphs, etc., at the same time, with quite powerful tools.</p>
 </section><section id="collaborations-with-sensitive-data"><h2 class="section-heading">Collaborations with sensitive data<a class="anchor" aria-label="anchor" href="#collaborations-with-sensitive-data"></a>
 </h2>
 <hr class="half-width"><p>If you determine that your project will include work with sensitive
@@ -483,6 +480,42 @@ data, it is important to agree with collaborators on how and where the
 data will be stored, as well as what the mechanisms for sharing the data
 will be and who is ultimately responsible for ensuring these are
 followed.</p>
+</section><section id="create-a-shared-to-do-list"><h2 class="section-heading">Create a shared “to-do” list<a class="anchor" aria-label="anchor" href="#create-a-shared-to-do-list"></a>
+</h2>
+<hr class="half-width"><p>Organising a structured to-do list of tasks still to complete and
+overall project work plan can be really useful whether collaborating
+with others or just with your future self. There are many options and
+tools available for how to do this.</p>
+<ul><li><p>If your project is centered around a Git-tracked repository, it
+could be as simple as updating a text file like <code>notes.txt</code>
+or <code>todo.txt</code>.</p></li>
+<li><p>Or make use of the ability to track “issues” on <a href="https://support.atlassian.com/bitbucket-cloud/docs/understand-bitbucket-issues/" class="external-link">BitBucket</a>
+or <a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues" class="external-link">GitHub</a>.
+The “issues” feature on online Git repositories allows you or others to
+describe work that needs to be done (often used on public repositories
+for reporting bugs in software), create and follow discussions about the
+issues/tasks, and link the closing of the issues to
+commits/pull-requests. E.g.: <a href="https://github.com/carpentries-lab/good-enough-practices/issues" class="external-link">Issues
+for original version of this lesson</a></p></li>
+<li><p>Microsoft Teams ‘Tasks’. Teams now lets you <a href="https://support.microsoft.com/en-au/office/use-the-tasks-app-in-teams-e32639f3-2e07-4b62-9a8c-fd706c12c070" class="external-link">add
+a ‘Tasks’ app/tab to a team space</a>, which then lets create a to-do
+list, assign tasks to people, and lets you track and view the tasks in
+various ways. <img src="fig/ms-tasks-list-view.png" alt="An example of Teams Tasks list view" class="figure"></p></li>
+<li><p><a href="https://jira.csiro.au/" class="external-link">Jira</a> is another tool
+supported and deployed in CSIRO. Developed by Australian software
+company [Atlassian](<a href="https://www.atlassian.com/software/jira" class="external-link uri">https://www.atlassian.com/software/jira</a>, it allows
+tracking of to-do tasks/issues and sub-tasks, lets you assign tasks to
+people, and lets you track and view tasks in the context of worflows,
+timelines, and “board” visualisations, such as the “Kanban board”. Jira
+can directly integrate with both BitBucket and Confluence, with Jira
+tasks able to be linked, referenced and tracked in each. Jira can be a
+very powerful tool if fully embraced, but can also be a bit clunky to
+starting out.</p></li>
+</ul><p><img src="fig/jira-kanban-example.png" alt="An example of a Jira Kanban board" class="figure"> A Kanban board example, from
+<a href="https://www.atlassian.com/software/jira/templates/scrum" class="external-link">Jira’s
+website</a>.</p>
+<p><img src="fig/jira-backlog-example.png" alt="An example of a Jira Backlog" class="figure"> A “backlog” view example, from <a href="https://www.atlassian.com/software/jira/templates/scrum" class="external-link">Jira’s
+website</a>.</p>
 </section><section id="make-the-license-explicit"><h2 class="section-heading">Make the license explicit<a class="anchor" aria-label="anchor" href="#make-the-license-explicit"></a>
 </h2>
 <hr class="half-width"><div id="what-is-a-licence" class="callout callout">
@@ -511,7 +544,10 @@ one; rather, it implies the author is keeping all rights and others are
 not allowed to re-use or modify the material. A project that consists of
 data and text may benefit from a different license to a project
 consisting primarily of code.</p>
-<p>We recommend Creative Commons licenses for data and text, either <a href="https://creativecommons.org/share-your-work/public-domain/cc0/" class="external-link">CC-0</a>
+<p><strong>IM&amp;T can help with advising on suitable
+licenses.</strong></p>
+<p>The original authors of this lesson recommend Creative Commons
+licenses for data and text, either <a href="https://creativecommons.org/share-your-work/public-domain/cc0/" class="external-link">CC-0</a>
 (the “No Rights Reserved” license) or <a href="https://wellcome.org/grant-funding/guidance/creative-commons-attribution-licence-cc" class="external-link">CC-BY</a>
 (the “Attribution” license, which permits sharing and reuse but requires
 people to give appropriate credit to the creators). For software, we
@@ -521,19 +557,19 @@ A useful resource to compare different licenses is available at <a href="https:/
 licences for research data is available at <a href="https://www.openaire.eu/research-data-how-to-license/" class="external-link">openaire</a>.</p>
 <blockquote>
 <p><strong>What Not To Do</strong></p>
-<p>We recommend <em>against</em> the “no commercial use” variations of
-the Creative Commons licenses because they may impede some forms of
-re-use. For example, if a researcher in a developing country is being
-paid by her government to compile a public health report, she will be
-unable to include your data if the license says “non-commercial”. We
-recommend permissive software licenses rather than the GNU General
-Public License (GPL) because it is easier to integrate
-permissively-licensed software into other projects, see chapter three in
-[<a href="https://www.oreilly.com/library/view/understanding-open-source/0596005814/" class="external-link">laurent2004</a>].</p>
+<p>We (the original authors) recommend <em>against</em> the “no
+commercial use” variations of the Creative Commons licenses because they
+may impede some forms of re-use. For example, if a researcher in a
+developing country is being paid by her government to compile a public
+health report, she will be unable to include your data if the license
+says “non-commercial”. We recommend permissive software licenses rather
+than the GNU General Public License (GPL) because it is easier to
+integrate permissively-licensed software into other projects, see
+chapter three in [<a href="https://www.oreilly.com/library/view/understanding-open-source/0596005814/" class="external-link">laurent2004</a>].</p>
 </blockquote>
 </section><section id="make-the-project-citable"><h2 class="section-heading">Make the project citable<a class="anchor" aria-label="anchor" href="#make-the-project-citable"></a>
 </h2>
-<hr class="half-width"><p>A <code>CITATION</code> file describes how to cite this project as a
+<hr class="half-width"><p>A <code>CITATION</code> file describes how to cite your project as a
 whole, and where to find (and how to cite) any data sets, code, figures,
 and other artifacts that have their own DOIs. The example below shows
 the <code>CITATION</code> file for the <a href="https://github.com/weecology/retriever" class="external-link">Ecodata Retriever</a>; for
@@ -545,6 +581,22 @@ project.</p>
 Morris, B.D. and E.P. White. 2013. "The EcoData Retriever:
 improving access to existing ecological data." PLOS ONE 8:e65848.
 http://doi.org/doi:10.1371/journal.pone.0065848</code></pre>
+<p>More recently a standard for citation files has been developed in the
+form of CFF; Citation File Format. Often saved in a CITATION.cff file,
+this format was proposed specifically for the purpose of holding
+expected information as a standardised set that was both human and
+machine readable. E.g.:</p>
+<pre><code>cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Druskat
+    given-names: Stephan
+    orcid: https://orcid.org/1234-5678-9101-1121
+title: "My Research Software"
+version: 2.0.4
+doi: 10.5281/zenodo.1234
+date-released: 2021-08-11</code></pre>
+<p>More information on CFF is available here: <a href="https://citation-file-format.github.io/" class="external-link">citation-file-format.github.io</a></p>
 </section><section id="recommended-resources"><h2 class="section-heading">Recommended resources<a class="anchor" aria-label="anchor" href="#recommended-resources"></a>
 </h2>
 <hr class="half-width"><ul><li><a href="https://the-turing-way.netlify.app/collaboration/collaboration.html" class="external-link">The
@@ -637,8 +689,8 @@ Enough Practices for Scientific Computing</a>.</p>
   "url": "https://csiro-data-school.github.io/good-practices-and-collaboration/04-collaboration.html",
   "identifier": "https://csiro-data-school.github.io/good-practices-and-collaboration/04-collaboration.html",
   "dateCreated": "2020-08-24",
-  "dateModified": "2023-09-23",
-  "datePublished": "2024-01-23"
+  "dateModified": "2024-01-28",
+  "datePublished": "2024-01-28"
 }
 
   </script><script>

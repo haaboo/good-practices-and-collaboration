@@ -409,7 +409,7 @@ actual analysis.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>You can lose your data</li>
@@ -494,7 +494,7 @@ documentation</li>
 </div>
 </section></section><section id="aio-02-data_management"><p>Content from <a href="02-data_management.html">Data Management</a></p>
 <hr>
-<p>Last updated on 2023-09-07 |
+<p>Last updated on 2024-01-28 |
         
         <a href="https://github.com/csiro-data-school/good-practices-and-collaboration/edit/main/episodes/02-data_management.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 32 minutes</p>
@@ -565,7 +565,7 @@ management? Write down 2 issues in the collaborative document.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>Data loss</li>
@@ -613,7 +613,7 @@ organization)</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2">Show me the solution</h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ul>
 <li>Commercial cloud service: it depends. Where are the servers located?
@@ -656,16 +656,15 @@ should avoid making local copies of large, stable databases. In that
 case, record the exact procedure used to obtain the raw data, as well as
 any other pertinent information, such as an official version number or
 the date of download.</p>
-<p>If external hard drives are used, store them off-site of the original
-location. Universities often have their own data storage solutions, so
-it is worthwhile to consult with your local Information Technology (IT)
-group or library. Alternatively cloud computing resources, like Amazon
-Simple Storage Service (Amazon S3), Google Cloud Storage or <a href="https://azure.microsoft.com/en-us/services/storage/" class="external-link">Azure</a> are
-reasonably priced and reliable. For large data sets, where storage and
-transfer can be expensive and time-consuming, you may need to use
-incremental backup or specialized storage systems, and people in your
-local IT group or library can often provide advice and assistance on
-options at your university or organization as well.</p>
+<p>In CSIRO, both raw data and final project data can (and should) be
+backed up on the <a href="https://data.csiro.au/" class="external-link">Data Access Portal</a>
+(it can host internal-only data copies as well as publicly published
+data). We also have project-allocated Bowen storage and HPC-linked
+high-volume storage paths that IM&amp;T can provide use of, but check if
+any automated backup schedules are in place.</p>
+<p>Also, remember not to place data in Git repositories. These are for
+code, scripts, notes, documentation, etc., but not data. Good data
+curation practices are different to good code curation practices.</p>
 </section><section id="working-with-sensitive-data"><h2 class="section-heading">Working with sensitive data<a class="anchor" aria-label="anchor" href="#working-with-sensitive-data"></a>
 </h2>
 <hr class="half-width">
@@ -689,22 +688,15 @@ sensitive data (for example, laws like the General Data Protection
 Regulation, known as the GDPR). These laws vary between countries and
 may affect whether you can share information between collaborators in
 different countries.</p>
+<p>You should have completed some compulsory online training on working
+with sensitive data within CSIRO.<br>
+The <a href="https://ardc.edu.au/resource-hub/working-with-sensitive-data/" class="external-link">Australian
+Research Data Commons <span class="math inline">\(ARDC\)</span></a>
+provides some additional guides for working with sensitive data within
+Australia.</p>
 </section><section id="create-the-data-you-wish-to-see-in-the-world"><h2 class="section-heading">Create the data you wish to see in the world<a class="anchor" aria-label="anchor" href="#create-the-data-you-wish-to-see-in-the-world"></a>
 </h2>
 <hr class="half-width">
-<div id="discussion-2-minutes" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<div id="discussion-2-minutes" class="callout-inner">
-<h3 class="callout-title">Discussion (2 minutes)<a class="anchor" aria-label="anchor" href="#discussion-2-minutes"></a>
-</h3>
-<div class="callout-content">
-<p>Which file formats do you store your data in? Enter your answers in
-the collaborative document.</p>
-</div>
-</div>
-</div>
 <p><em>Filenames</em>: Store especially useful metadata as part of the
 filename itself, while keeping the filename regular enough for easy
 pattern matching. For example, a filename like
@@ -747,16 +739,15 @@ sequencing experiment metadata)</li>
 </ul></section><section id="create-analysis-friendly-data"><h2 class="section-heading">Create analysis-friendly data<a class="anchor" aria-label="anchor" href="#create-analysis-friendly-data"></a>
 </h2>
 <hr class="half-width">
-<div id="discussion-2-minutes-1" class="callout discussion">
+<div id="discussion-2-minutes" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div id="discussion-2-minutes-1" class="callout-inner">
-<h3 class="callout-title">Discussion (2 minutes)<a class="anchor" aria-label="anchor" href="#discussion-2-minutes-1"></a>
+<div id="discussion-2-minutes" class="callout-inner">
+<h3 class="callout-title">Discussion (2 minutes)<a class="anchor" aria-label="anchor" href="#discussion-2-minutes"></a>
 </h3>
 <div class="callout-content">
-<p>Which of the table layouts is analysis friendly? Discuss. Enter your
-answers in the collaborative document. <img src="../fig/wilson-tidy-data.png" alt="Two tables of data appear side-by-side. The table on the left has columns named site, 1999, and 2000. The table on the right has columns named site, year, and cases." class="figure"></p>
+<p>Which of the table layouts is analysis friendly? Discuss. <img src="../fig/wilson-tidy-data.png" alt="Two tables of data appear side-by-side. The table on the left has columns named site, 1999, and 2000. The table on the right has columns named site, year, and cases." class="figure"></p>
 </div>
 </div>
 </div>
@@ -804,7 +795,8 @@ set of boundary coordinates.</p>
 <h3 class="callout-title">How, when and why do you document?<a class="anchor" aria-label="anchor" href="#how-when-and-why-do-you-document"></a>
 </h3>
 <div class="callout-content">
-<p>As much as possible, always and to help you future self.</p>
+<p>As much as possible, always and to <strong>help you future
+self</strong>.</p>
 </div>
 </div>
 </div>
@@ -840,9 +832,10 @@ data?</p>
 <ul>
 <li>Personal/lab web-site</li>
 <li>GitHub</li>
-<li>General repo (i.e.: Zenodo, Data Dryad, etc.)</li>
-<li>Community specific repo (i.e.: ArrayExpress, SRA, EGA, PRIDE,
+<li>General data repo (i.e.: Zenodo, Data Dryad, etc.)</li>
+<li>Community specific repo (i.e.: ArrayExpress, NCBI, SRA, EGA, PRIDE,
 etc.)</li>
+<li>DAP</li>
 </ul>
 </div>
 </div>
@@ -852,37 +845,40 @@ etc.)</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3">Show me the solution</h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <ul>
-<li>Personal/lab web-site: this is not the best place to store your data
+<li>Personal/lab web-site: not the best place to store your data
 long-term. These websites are not hosted long term. You can have a link
 to the repo, though.</li>
 <li>GitHub: in itself it is not proper for sharing your data as it can
-be modified. However, a snapshot of a Github repository can be stored in
-Zenodo and be issued a DOI.</li>
-<li>General repo (i.e.: Zenodo, Data Dryad, etc.): good option to
+be modified. A snapshot of a Github repository can be stored in a
+service like Zenodo or the DAP and be issued a DOI.</li>
+<li>General data repo (i.e.: Zenodo, Data Dryad, etc.): good option to
 deposit data that does not fit in a specific repository. Best if the
 service is non-commerical, has long-termdata archival and issues DOIs,
-such as Zenodo.</li>
-<li>Community specific repo (i.e.: ArrayExpress, SRA, EGA, PRIDE, etc.):
-best option to share your data, if your research community has come up
-with a sustainable long-term repository.</li>
+such as Zenodo. But DAP is preferred for CSIRO employees.</li>
+<li>Community specific repo (i.e.: ArrayExpress, NCBI, SRA, EGA, PRIDE,
+etc.): good option, if your research community has come up with a
+sustainable long-term repository for a certain data type.</li>
+<li>DAP: generally best option for any data sharing for CSIRO
+employees.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 <p>Your data is as much a product of your research as the papers you
-write, and just as likely to be useful to others (if not more so). Sites
-such as <a href="https://datadryad.org" class="external-link">Dryad</a> and <a href="https://zenodo.org" class="external-link">Zenodo</a> allow others to find your work, use
-it, and cite it; we discuss licensing in the episode on collaboration
-[04-collaboration]. Follow your research community’s standards for how
-to provide metadata. Note that there are two types of metadata: metadata
-about the dataset as a whole and metadata about the content within the
-dataset. If the audience is humans, write the metadata (the README file)
-for humans. If the audience includes automatic metadata harvesters, fill
-out the formal metadata and write a good README file for the humans [<a href="https://github.com/swcarpentry/good-enough-practices-in-scientific-computing/issues/3#issuecomment-157410442" class="external-link">wickes2015</a>].</p>
+write, and just as likely to be useful to others (if not more so).
+Services such as the <a href="https://data.csiro.au/" class="external-link">DAP</a> can allow
+others to find your work, use it, and cite it; we discuss licensing in
+the episode on collaboration [04-collaboration]. Follow your research
+community’s standards for how to provide metadata. Note that there are
+two types of metadata: metadata about the dataset as a whole and
+metadata about the content within the dataset. If the audience is
+humans, write the metadata (the README file) for humans. If the audience
+includes automatic metadata harvesters, fill out the formal metadata and
+write a good README file for the humans [<a href="https://github.com/swcarpentry/good-enough-practices-in-scientific-computing/issues/3#issuecomment-157410442" class="external-link">wickes2015</a>].</p>
 <div id="what-is-a-doi" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -896,7 +892,10 @@ out the formal metadata and write a good README file for the humans [<a href="ht
 used to identify objects uniquely.</li>
 <li>Data with a persistent DOI can be found even when your lab website
 dies.</li>
-<li>doi-issuing repositories include: zenodo, figshare, dryad.</li>
+<li>doi-issuing repositories include: zenodo, figshare, dryad and the
+DAP.</li>
+<li>e.g. <a href="https://doi.org/10.25919/t1ad-8k76" class="external-link">https://doi.org/10.25919/t1ad-8k76</a>
+</li>
 </ul>
 </div>
 </div>
@@ -926,6 +925,8 @@ publishers or institutional websites.</li>
 repository for research data that takes care of long-term preservation
 and good archival practices, while researchers can share, keep control
 of, and get recognition for their data.</li>
+<li>The DAP (<a href="https://data.csiro.au/" class="external-link">https://data.csiro.au/</a>): CSIRO’s own
+data repository.</li>
 </ul>
 </div>
 </div>
@@ -945,17 +946,16 @@ information should be included but the main compoments of a DMP are:</p>
 <li>Information on how data will be stored and managed, including
 long-term storage and maintenance after your project is complete</li>
 </ul>
-<div id="discussion-2-minutes-2" class="callout challenge">
+<div id="discussion-2-minutes-1" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="discussion-2-minutes-2" class="callout-inner">
-<h3 class="callout-title">Discussion (2 minutes)<a class="anchor" aria-label="anchor" href="#discussion-2-minutes-2"></a>
+<div id="discussion-2-minutes-1" class="callout-inner">
+<h3 class="callout-title">Discussion (2 minutes)<a class="anchor" aria-label="anchor" href="#discussion-2-minutes-1"></a>
 </h3>
 <div class="callout-content">
 <p>Aside from being a requirement, there are many benefits of writing a
-DMP to researchers. What sort of benefits do you think there are? Enter
-your answers in the collaborative document.</p>
+DMP to researchers. What sort of benefits do you think there are?</p>
 </div>
 </div>
 </div>
@@ -964,7 +964,7 @@ your answers in the collaborative document.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4">Show me the solution</h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <ul>
 <li>Find and understand data easily</li>
@@ -984,6 +984,9 @@ it may be helpful to work on it together to identify any major
 considerations. Often research institutions provide support for DMPs,
 e.g. through library services or a data steward.</p>
 <p>More resources on data management plans are available at <a href="https://dmponline.dcc.ac.uk" class="external-link">DMP online</a>.</p>
+<p>The CSIRO’s <a href="https://rdp.csiro.au/" class="external-link">Research Data Planner</a>
+can help you prepare a data management plan. It will be covered in
+detail next week.</p>
 <div id="whats-your-next-step-in-data-management" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -1060,7 +1063,7 @@ findable and accessible by the broader community</li>
 </div>
 </section></section><section id="aio-03-software"><p>Content from <a href="03-software.html">Code and Software</a></p>
 <hr>
-<p>Last updated on 2023-08-31 |
+<p>Last updated on 2024-01-28 |
         
         <a href="https://github.com/csiro-data-school/good-practices-and-collaboration/edit/main/episodes/03-software.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 40 minutes</p>
@@ -1141,7 +1144,7 @@ Institute</a>.</p>
 </h3>
 <div class="callout-content">
 <p><strong>Discussion</strong></p>
-<p>What can go wrong with writing research code?</p>
+<p>What can go wrong when trying to reuse research code?</p>
 </div>
 </div>
 </div>
@@ -1336,9 +1339,8 @@ given island.</p>
         total fruit = total fruit + number of fruit on tree
     end for loop
     return total fruit</code></pre>
-<p>Write the commands to call this function to count how many coconuts
-there are on Sam’s island, how many cherries there are on Sam’s island,
-and how many cherries there are on Charlie’s island.</p>
+<p>Write a pseudocode command to call this function to count how many
+coconuts there are on Sam’s island.</p>
 <p>Write a pseudocode for loop like the one above that uses this
 function to count all the cherries on every island.</p>
 </div>
@@ -1351,9 +1353,8 @@ function to count all the cherries on every island.</p>
 </button>
 <div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
-<pre class="source"><code>sams coconuts = count_fruit_on_island(coconuts, Sam's island)
-sams cherries = count_fruit_on_island(cherries, Sam's island)
-charlies cherries = count_fruit_on_island(cherries, Charlie's island)</code></pre>
+<p>To count Sam’s island’s coconuts:</p>
+<pre class="source"><code>sams coconuts = count_fruit_on_island(coconuts, Sam's island)</code></pre>
 <p>To count all the cherries on every island:</p>
 <pre class="source"><code>total cherries = 0
 for every island
@@ -1434,15 +1435,15 @@ each of the following sections:</p>
 <li>processFunction - incorrect, too vague</li>
 <li>computeCubesOfThird - incorrect, doesn’t imply every third in
 sequence</li>
-<li>cubeEveryThirdNumberInASequence - incorrect, too long</li>
+<li>cubeEveryThirdNumberInASequence - maybe, but too long</li>
 <li><strong>cubeEachThird - correct, short and includes information on
 the data and calculation performed</strong></li>
 <li>3rdCubed - incorrect, bad practice to put a number at the beginning
-of a function name (and not allowed by some programming languages)</li>
+of a function name (not allowed by some programming languages)</li>
 </ol>
 <p><code>variableName</code></p>
 <ol style="list-style-type: decimal">
-<li>arrayOfNumbersToBeCubed - incorrect, too long</li>
+<li>arrayOfNumbersToBeCubed - maybe, but too long</li>
 <li>input - incorrect, too vague</li>
 <li><strong>numericSequence - correct, short and included information
 about the type of input</strong></li>
@@ -1559,7 +1560,7 @@ arguments and expected behaviour</li>
 </div>
 </section></section><section id="aio-04-collaboration"><p>Content from <a href="04-collaboration.html">Collaboration</a></p>
 <hr>
-<p>Last updated on 2023-09-23 |
+<p>Last updated on 2024-01-28 |
         
         <a href="https://github.com/csiro-data-school/good-practices-and-collaboration/edit/main/episodes/04-collaboration.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 37 minutes</p>
@@ -1629,7 +1630,7 @@ challenges<a class="anchor" aria-label="anchor" href="#collaboration-opportuniti
   <h3 class="accordion-header" id="headingSpoiler1">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Suggestions</h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>How collaboration can help:</p>
 <ul>
@@ -1723,7 +1724,7 @@ README</a></p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>This Data Project README:</p>
 <ul>
@@ -1751,16 +1752,6 @@ paper though)</li>
 </div>
 </div>
 </div>
-</section><section id="create-a-shared-to-do-list"><h2 class="section-heading">Create a shared “to-do” list<a class="anchor" aria-label="anchor" href="#create-a-shared-to-do-list"></a>
-</h2>
-<hr class="half-width">
-<p>This can be a plain text file called something like
-<code>notes.txt</code> or <code>todo.txt</code>, or you can use sites
-such as GitHub or Bitbucket to create a new <em>issue</em> for each
-to-do item. (You can even add labels such as “low hanging fruit” to
-point newcomers at issues that are good starting points.) Whatever you
-choose, describe the items clearly so that they make sense to
-newcomers.</p>
 </section><section id="decide-on-communication-strategies"><h2 class="section-heading">Decide on communication strategies<a class="anchor" aria-label="anchor" href="#decide-on-communication-strategies"></a>
 </h2>
 <hr class="half-width">
@@ -1770,6 +1761,12 @@ external users / collaborators. This includes the location and
 technology for email lists, chat channels, voice / video conferencing,
 documentation, and meeting notes, as well as which of these channels
 will be public or private.</p>
+<p>Supported tools within CSIRO include <a href="https://confluence.csiro.au/" class="external-link">Confluence</a>, for wiki-style
+shared documentation, and Microsoft Teams, for online discussions, video
+conferencing, file sharing and more.</p>
+<p>Not supported, but worth knowing of is <a href="https://miro.com/" class="external-link">Miro</a>, which allows creating a shared,
+online whiteboard, where multiple people may be building up notes,
+diagrams, graphs, etc., at the same time, with quite powerful tools.</p>
 </section><section id="collaborations-with-sensitive-data"><h2 class="section-heading">Collaborations with sensitive data<a class="anchor" aria-label="anchor" href="#collaborations-with-sensitive-data"></a>
 </h2>
 <hr class="half-width">
@@ -1778,6 +1775,45 @@ data, it is important to agree with collaborators on how and where the
 data will be stored, as well as what the mechanisms for sharing the data
 will be and who is ultimately responsible for ensuring these are
 followed.</p>
+</section><section id="create-a-shared-to-do-list"><h2 class="section-heading">Create a shared “to-do” list<a class="anchor" aria-label="anchor" href="#create-a-shared-to-do-list"></a>
+</h2>
+<hr class="half-width">
+<p>Organising a structured to-do list of tasks still to complete and
+overall project work plan can be really useful whether collaborating
+with others or just with your future self. There are many options and
+tools available for how to do this.</p>
+<ul>
+<li><p>If your project is centered around a Git-tracked repository, it
+could be as simple as updating a text file like <code>notes.txt</code>
+or <code>todo.txt</code>.</p></li>
+<li><p>Or make use of the ability to track “issues” on <a href="https://support.atlassian.com/bitbucket-cloud/docs/understand-bitbucket-issues/" class="external-link">BitBucket</a>
+or <a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues" class="external-link">GitHub</a>.
+The “issues” feature on online Git repositories allows you or others to
+describe work that needs to be done (often used on public repositories
+for reporting bugs in software), create and follow discussions about the
+issues/tasks, and link the closing of the issues to
+commits/pull-requests. E.g.: <a href="https://github.com/carpentries-lab/good-enough-practices/issues" class="external-link">Issues
+for original version of this lesson</a></p></li>
+<li><p>Microsoft Teams ‘Tasks’. Teams now lets you <a href="https://support.microsoft.com/en-au/office/use-the-tasks-app-in-teams-e32639f3-2e07-4b62-9a8c-fd706c12c070" class="external-link">add
+a ‘Tasks’ app/tab to a team space</a>, which then lets create a to-do
+list, assign tasks to people, and lets you track and view the tasks in
+various ways. <img src="../fig/ms-tasks-list-view.png" alt="An example of Teams Tasks list view" class="figure"></p></li>
+<li><p><a href="https://jira.csiro.au/" class="external-link">Jira</a> is another tool
+supported and deployed in CSIRO. Developed by Australian software
+company [Atlassian](<a href="https://www.atlassian.com/software/jira" class="external-link uri">https://www.atlassian.com/software/jira</a>, it allows
+tracking of to-do tasks/issues and sub-tasks, lets you assign tasks to
+people, and lets you track and view tasks in the context of worflows,
+timelines, and “board” visualisations, such as the “Kanban board”. Jira
+can directly integrate with both BitBucket and Confluence, with Jira
+tasks able to be linked, referenced and tracked in each. Jira can be a
+very powerful tool if fully embraced, but can also be a bit clunky to
+starting out.</p></li>
+</ul>
+<p><img src="../fig/jira-kanban-example.png" alt="An example of a Jira Kanban board" class="figure"> A Kanban board example, from
+<a href="https://www.atlassian.com/software/jira/templates/scrum" class="external-link">Jira’s
+website</a>.</p>
+<p><img src="../fig/jira-backlog-example.png" alt="An example of a Jira Backlog" class="figure"> A “backlog” view example, from <a href="https://www.atlassian.com/software/jira/templates/scrum" class="external-link">Jira’s
+website</a>.</p>
 </section><section id="make-the-license-explicit"><h2 class="section-heading">Make the license explicit<a class="anchor" aria-label="anchor" href="#make-the-license-explicit"></a>
 </h2>
 <hr class="half-width">
@@ -1809,7 +1845,10 @@ one; rather, it implies the author is keeping all rights and others are
 not allowed to re-use or modify the material. A project that consists of
 data and text may benefit from a different license to a project
 consisting primarily of code.</p>
-<p>We recommend Creative Commons licenses for data and text, either <a href="https://creativecommons.org/share-your-work/public-domain/cc0/" class="external-link">CC-0</a>
+<p><strong>IM&amp;T can help with advising on suitable
+licenses.</strong></p>
+<p>The original authors of this lesson recommend Creative Commons
+licenses for data and text, either <a href="https://creativecommons.org/share-your-work/public-domain/cc0/" class="external-link">CC-0</a>
 (the “No Rights Reserved” license) or <a href="https://wellcome.org/grant-funding/guidance/creative-commons-attribution-licence-cc" class="external-link">CC-BY</a>
 (the “Attribution” license, which permits sharing and reuse but requires
 people to give appropriate credit to the creators). For software, we
@@ -1819,20 +1858,20 @@ A useful resource to compare different licenses is available at <a href="https:/
 licences for research data is available at <a href="https://www.openaire.eu/research-data-how-to-license/" class="external-link">openaire</a>.</p>
 <blockquote>
 <p><strong>What Not To Do</strong></p>
-<p>We recommend <em>against</em> the “no commercial use” variations of
-the Creative Commons licenses because they may impede some forms of
-re-use. For example, if a researcher in a developing country is being
-paid by her government to compile a public health report, she will be
-unable to include your data if the license says “non-commercial”. We
-recommend permissive software licenses rather than the GNU General
-Public License (GPL) because it is easier to integrate
-permissively-licensed software into other projects, see chapter three in
-[<a href="https://www.oreilly.com/library/view/understanding-open-source/0596005814/" class="external-link">laurent2004</a>].</p>
+<p>We (the original authors) recommend <em>against</em> the “no
+commercial use” variations of the Creative Commons licenses because they
+may impede some forms of re-use. For example, if a researcher in a
+developing country is being paid by her government to compile a public
+health report, she will be unable to include your data if the license
+says “non-commercial”. We recommend permissive software licenses rather
+than the GNU General Public License (GPL) because it is easier to
+integrate permissively-licensed software into other projects, see
+chapter three in [<a href="https://www.oreilly.com/library/view/understanding-open-source/0596005814/" class="external-link">laurent2004</a>].</p>
 </blockquote>
 </section><section id="make-the-project-citable"><h2 class="section-heading">Make the project citable<a class="anchor" aria-label="anchor" href="#make-the-project-citable"></a>
 </h2>
 <hr class="half-width">
-<p>A <code>CITATION</code> file describes how to cite this project as a
+<p>A <code>CITATION</code> file describes how to cite your project as a
 whole, and where to find (and how to cite) any data sets, code, figures,
 and other artifacts that have their own DOIs. The example below shows
 the <code>CITATION</code> file for the <a href="https://github.com/weecology/retriever" class="external-link">Ecodata Retriever</a>; for
@@ -1844,6 +1883,22 @@ project.</p>
 Morris, B.D. and E.P. White. 2013. "The EcoData Retriever:
 improving access to existing ecological data." PLOS ONE 8:e65848.
 http://doi.org/doi:10.1371/journal.pone.0065848</code></pre>
+<p>More recently a standard for citation files has been developed in the
+form of CFF; Citation File Format. Often saved in a CITATION.cff file,
+this format was proposed specifically for the purpose of holding
+expected information as a standardised set that was both human and
+machine readable. E.g.:</p>
+<pre><code>cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Druskat
+    given-names: Stephan
+    orcid: https://orcid.org/1234-5678-9101-1121
+title: "My Research Software"
+version: 2.0.4
+doi: 10.5281/zenodo.1234
+date-released: 2021-08-11</code></pre>
+<p>More information on CFF is available here: <a href="https://citation-file-format.github.io/" class="external-link">citation-file-format.github.io</a></p>
 </section><section id="recommended-resources"><h2 class="section-heading">Recommended resources<a class="anchor" aria-label="anchor" href="#recommended-resources"></a>
 </h2>
 <hr class="half-width">
@@ -2195,7 +2250,7 @@ conventions?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>Using dates up front makes it difficult to quickly find data for
@@ -2626,7 +2681,7 @@ manual version control?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Some good things:</p>
 <ul>
@@ -3324,8 +3379,8 @@ Enough Practices for Scientific Computing</a>.</p>
   "url": "https://csiro-data-school.github.io/good-practices-and-collaboration/instructor/aio.html",
   "identifier": "https://csiro-data-school.github.io/good-practices-and-collaboration/instructor/aio.html",
   "dateCreated": "2020-08-24",
-  "dateModified": "2024-01-23",
-  "datePublished": "2024-01-23"
+  "dateModified": "2024-01-28",
+  "datePublished": "2024-01-28"
 }
 
   </script><script>

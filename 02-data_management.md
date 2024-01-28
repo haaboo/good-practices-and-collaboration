@@ -104,19 +104,16 @@ that case, record the exact procedure used to obtain the raw data,
 as well as any other pertinent information, such as an official
 version number or the date of download.
 
-If external hard drives
-are used, store them off-site of the original location. Universities
-often have their own data storage solutions, so it is worthwhile to
-consult with your local Information Technology (IT) group or
-library. Alternatively cloud computing resources, like
-Amazon Simple Storage Service (Amazon S3), Google Cloud
-Storage or [Azure](https://azure.microsoft.com/en-us/services/storage/) are
-reasonably priced and reliable. For large data sets, where storage
-and transfer can be expensive and time-consuming, you may need to
-use incremental backup or specialized storage systems, and people in
-your local IT group or library can often provide advice and
-assistance on options at your university or organization as well.
+In CSIRO, both raw data and final project data can (and should) be backed up on the 
+[Data Access Portal](https://data.csiro.au/) (it can host internal-only data copies 
+as well as publicly published data). We also have project-allocated Bowen storage 
+and HPC-linked high-volume storage paths that IM&T can provide use of, but check
+if any automated backup schedules are in place.  
 
+Also, remember not to place data in Git repositories. These are for code, scripts,
+notes, documentation, etc., but not data. Good data curation practices are different
+to good code curation practices.  
+  
 ## Working with sensitive data
 
 Identify whether your project will work with sensitive data - by which we might mean:
@@ -128,16 +125,12 @@ Identify whether your project will work with sensitive data - by which we might 
 It is important to understand the restrictions which may apply when working with sensitive data, and also ensure that your project complies with any applicable laws relating to storage, use and sharing of sensitive data (for example, laws like the General Data Protection Regulation, known as the GDPR).
 These laws vary between countries and may affect whether you can share information between collaborators in different countries.
 
+You should have completed some compulsory online training on working with sensitive data within
+CSIRO.  
+The [Australian Research Data Commons \(ARDC\)](https://ardc.edu.au/resource-hub/working-with-sensitive-data/)
+provides some additional guides for working with sensitive data within Australia.  
+
 ## Create the data you wish to see in the world
-
-:::::::::::::::::::::::::::::::::::::::  challenge
-
-## Discussion (2 minutes)
-
-Which file formats do you store your data in? Enter your answers in the collaborative document.
-
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 *Filenames*: Store especially useful metadata as part of the
 filename itself, while keeping the filename regular enough for easy
@@ -177,7 +170,7 @@ transformations that we recommend at the beginning of analysis:
 
 ## Discussion (2 minutes)
 
-Which of the table layouts is analysis friendly? Discuss. Enter your answers in the collaborative document.
+Which of the table layouts is analysis friendly? Discuss. 
 ![](fig/wilson-tidy-data.png){alt="Two tables of data appear side-by-side. The table on the left has columns named site, 1999, and 2000. The table on the right has columns named site, year, and cases."}
 
 
@@ -230,7 +223,7 @@ chosen as a set of boundary coordinates.
 
 ## How, when and why do you document?
 
-As much as possible, always and to help you future self.
+As much as possible, always and to **help you future self**.
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -259,24 +252,26 @@ Which of the following places would be good places to share your data?
 
 - Personal/lab web-site
 - GitHub
-- General repo (i.e.: Zenodo, Data Dryad, etc.)
-- Community specific repo (i.e.: ArrayExpress, SRA, EGA, PRIDE, etc.)
+- General data repo (i.e.: Zenodo, Data Dryad, etc.)
+- Community specific repo (i.e.: ArrayExpress, NCBI, SRA, EGA, PRIDE, etc.)
+- DAP
 
 :::::::::::::::  solution
 
 ## Solution
 
-- Personal/lab web-site: this is not the best place to store your data long-term. These websites are not hosted long term. You can have a link to the repo, though.
-- GitHub: in itself it is not proper for sharing your data as it can be modified. However, a snapshot of a Github repository can be stored in Zenodo and be issued a DOI.
-- General repo (i.e.: Zenodo, Data Dryad, etc.): good option to deposit data that does not fit in a specific repository. Best if the service is non-commerical, has long-termdata archival and issues DOIs, such as Zenodo.
-- Community specific repo (i.e.: ArrayExpress, SRA, EGA, PRIDE, etc.): best option to share your data, if your research community has come up with a sustainable long-term repository.
+- Personal/lab web-site: not the best place to store your data long-term. These websites are not hosted long term. You can have a link to the repo, though.
+- GitHub: in itself it is not proper for sharing your data as it can be modified. A snapshot of a Github repository can be stored in a service like Zenodo or the DAP and be issued a DOI.
+- General data repo (i.e.: Zenodo, Data Dryad, etc.): good option to deposit data that does not fit in a specific repository. Best if the service is non-commerical, has long-termdata archival and issues DOIs, such as Zenodo. But DAP is preferred for CSIRO employees.
+- Community specific repo (i.e.: ArrayExpress, NCBI, SRA, EGA, PRIDE, etc.): good option, if your research community has come up with a sustainable long-term repository for a certain data type.
+- DAP: generally best option for any data sharing for CSIRO employees. 
 
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Your data is as much a product of your research as the papers you write, and just as likely to be useful to others (if not more so).
-Sites such as [Dryad](https://datadryad.org) and [Zenodo](https://zenodo.org) allow others to find your work, use it, and cite it; we discuss licensing in the episode on collaboration [04-collaboration].
+Services such as the [DAP](https://data.csiro.au/) can allow others to find your work, use it, and cite it; we discuss licensing in the episode on collaboration [04-collaboration].
 Follow your research community's standards for how to provide metadata.
 Note that there are two types of metadata: metadata about the dataset as a whole and metadata about the content within the dataset.
 If the audience is humans, write the metadata (the README file) for humans.
@@ -288,7 +283,8 @@ If the audience includes automatic metadata harvesters, fill out the formal meta
 
 - A digital object identifier is a persistent identifier or handle used to identify objects uniquely.
 - Data with a persistent DOI can be found even when your lab website dies.
-- doi-issuing repositories include: zenodo, figshare, dryad.
+- doi-issuing repositories include: zenodo, figshare, dryad and the DAP.
+- e.g. [https://doi.org/10.25919/t1ad-8k76](https://doi.org/10.25919/t1ad-8k76)
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -300,6 +296,7 @@ If the audience includes automatic metadata harvesters, fill out the formal meta
 - Zenodo ([http://zenodo.org](https://zenodo.org)): A repository service that enables researchers, scientists, projects, and institutions to share and showcase multidisciplinary research results (data and publications)
 - Dryad ([http://datadryad.org](https://datadryad.org)): A repository that aims to make data archiving as simple and as rewarding as possible through a suite of services not necessarily provided by publishers or institutional websites.
 - Dataverse ([http://thedata.org](https://thedata.org)): A repository for research data that takes care of long-term preservation and good archival practices, while researchers can share, keep control of, and get recognition for their data.
+- The DAP ([https://data.csiro.au/](https://data.csiro.au/)): CSIRO's own data repository.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -318,7 +315,7 @@ Many funders provide basic templates for writing a DMP, along with guidelines on
 
 ## Discussion (2 minutes)
 
-Aside from being a requirement, there are many benefits of writing a DMP to researchers. What sort of benefits do you think there are? Enter your answers in the collaborative document.
+Aside from being a requirement, there are many benefits of writing a DMP to researchers. What sort of benefits do you think there are? 
 
 :::::::::::::::  solution
 
@@ -338,6 +335,8 @@ If your lab group doesn't have a data management plan, it may be helpful to work
 Often research institutions provide support for DMPs, e.g. through library services or a data steward.
 
 More resources on data management plans are available at [DMP online](https://dmponline.dcc.ac.uk).
+
+The CSIRO's [Research Data Planner](https://rdp.csiro.au/) can help you prepare a data management plan. It will be covered in detail next week.  
 
 ::::::::::::::::::::::::::::::::::::::  discussion
 

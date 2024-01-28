@@ -152,29 +152,65 @@ This Software Project README:
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Create a shared "to-do" list
-
-This can be a plain text
-file called something like `notes.txt` or `todo.txt`, or you can use
-sites such as GitHub or Bitbucket to create a new *issue* for each
-to-do item. (You can even add labels such as "low hanging fruit" to
-point newcomers at issues that are good starting points.) Whatever
-you choose, describe the items clearly so that they make sense to
-newcomers.
-
 ## Decide on communication strategies
 
-Make explicit
-decisions about (and publicize where appropriate) how members of the
+Make explicit decisions about (and publicize where appropriate) how members of the
 project will communicate with each other and with external users /
 collaborators. This includes the location and technology for email
 lists, chat channels, voice / video conferencing, documentation, and
 meeting notes, as well as which of these channels will be public or
 private.
 
+Supported tools within CSIRO include [Confluence](https://confluence.csiro.au/),
+for wiki-style shared documentation, and Microsoft Teams, for online discussions,
+video conferencing, file sharing and more.
+
+Not supported, but worth knowing of is [Miro](https://miro.com/), which allows creating 
+a shared, online whiteboard, where multiple people may be building up notes, diagrams,
+graphs, etc., at the same time, with quite powerful tools.  
+  
 ## Collaborations with sensitive data
 
 If you determine that your project will include work with sensitive data, it is important to agree with collaborators on how and where the data will be stored, as well as what the mechanisms for sharing the data will be and who is ultimately responsible for ensuring these are followed.
+
+## Create a shared "to-do" list
+
+Organising a structured to-do list of tasks still to complete and overall project work
+plan can be really useful whether collaborating with others or just with your future self.
+There are many options and tools available for how to do this.
+
+- If your project is centered around a Git-tracked repository, it could be as simple
+as updating a text file like `notes.txt` or `todo.txt`.
+
+- Or make use of the ability to track "issues" on 
+[BitBucket](https://support.atlassian.com/bitbucket-cloud/docs/understand-bitbucket-issues/)
+or [GitHub](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues). 
+The "issues" feature on online Git repositories allows you or others to describe work that needs
+to be done (often used on public repositories for reporting bugs in software), 
+create and follow discussions about the issues/tasks, and link the closing of the issues 
+to commits/pull-requests.
+E.g.: [Issues for original version of this lesson](https://github.com/carpentries-lab/good-enough-practices/issues)
+
+- Microsoft Teams 'Tasks'. Teams now lets you 
+[add a 'Tasks' app/tab to a team space](https://support.microsoft.com/en-au/office/use-the-tasks-app-in-teams-e32639f3-2e07-4b62-9a8c-fd706c12c070), 
+which then lets create a to-do list, assign tasks to people, and lets you track and view the
+tasks in various ways.
+![](fig/ms-tasks-list-view.png){alt="An example of Teams Tasks list view"}
+
+- [Jira](https://jira.csiro.au/) is another tool supported and deployed in CSIRO. Developed by
+Australian software company [Atlassian](https://www.atlassian.com/software/jira, it allows 
+tracking of to-do tasks/issues and sub-tasks, lets you assign tasks to people, and lets 
+you track and view tasks in the context of worflows, timelines, and "board" visualisations,
+such as the "Kanban board". Jira can directly integrate with both BitBucket
+and Confluence, with Jira tasks able to be linked, referenced and tracked in each.
+Jira can be a very powerful tool if fully embraced, but can also be a bit clunky to starting out.
+
+![](fig/jira-kanban-example.png){alt="An example of a Jira Kanban board"}
+A Kanban board example, from [Jira's website](https://www.atlassian.com/software/jira/templates/scrum).  
+
+![](fig/jira-backlog-example.png){alt="An example of a Jira Backlog"}
+A "backlog" view example, from [Jira's website](https://www.atlassian.com/software/jira/templates/scrum).  
+
 
 ## Make the license explicit
 
@@ -197,8 +233,10 @@ explicit license does not mean there isn't one; rather, it implies
 the author is keeping all rights and others are not allowed to
 re-use or modify the material.
 A project that consists of data and text may benefit from a different license to a project consisting primarily of code.
+  
+**IM&T can help with advising on suitable licenses.**
 
-We recommend Creative Commons licenses for data and text, either
+The original authors of this lesson recommend Creative Commons licenses for data and text, either
 [CC-0](https://creativecommons.org/share-your-work/public-domain/cc0/) (the "No Rights Reserved"
 license) or [CC-BY](https://wellcome.org/grant-funding/guidance/creative-commons-attribution-licence-cc) (the "Attribution"
 license, which permits sharing and reuse but requires people to give
@@ -209,7 +247,7 @@ A useful resource to compare different licenses is available at [tldrlegal](http
 
 > **What Not To Do**
 > 
-> We recommend *against* the "no commercial use" variations of the
+> We (the original authors) recommend *against* the "no commercial use" variations of the
 > Creative Commons licenses because they may impede some forms of
 > re-use. For example, if a researcher in a developing country is
 > being paid by her government to compile a public health report,
@@ -221,7 +259,7 @@ A useful resource to compare different licenses is available at [tldrlegal](http
 
 ## Make the project citable
 
-A `CITATION` file describes how to cite this
+A `CITATION` file describes how to cite your
 project as a whole, and where to find (and how to cite) any data
 sets, code, figures, and other artifacts that have their own DOIs.
 The example below shows the `CITATION` file for the
@@ -235,7 +273,27 @@ Please cite this work as:
 Morris, B.D. and E.P. White. 2013. "The EcoData Retriever:
 improving access to existing ecological data." PLOS ONE 8:e65848.
 http://doi.org/doi:10.1371/journal.pone.0065848
+```  
+  
+More recently a standard for citation files has been developed in the form of CFF;
+Citation File Format. Often saved in a CITATION.cff file, this format was proposed 
+specifically for the purpose of holding expected information as a standardised set 
+that was both human and machine readable. E.g.:
 ```
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Druskat
+    given-names: Stephan
+    orcid: https://orcid.org/1234-5678-9101-1121
+title: "My Research Software"
+version: 2.0.4
+doi: 10.5281/zenodo.1234
+date-released: 2021-08-11
+```
+
+More information on CFF is available here:  [citation-file-format.github.io](https://citation-file-format.github.io/)
+
 
 ## Recommended resources
 

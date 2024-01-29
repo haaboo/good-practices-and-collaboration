@@ -77,11 +77,11 @@
   Good Enough Practices in Scientific Computing &amp; Collaboration
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 57%" class="percentage">
-    57%
+<aside class="col-md-12 lesson-progress"><div style="width: 44%" class="percentage">
+    44%
   </div>
   <div class="progress lab">
-    <div class="progress-bar lab" role="progressbar" style="width: 57%" aria-valuenow="57" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar lab" role="progressbar" style="width: 44%" aria-valuenow="44" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -228,6 +228,15 @@ directory</a></li>
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush10">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading10">
+        <a href="09-agile.html">9. Agile</a>
+    </div><!--/div.accordion-header-->
+        
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -286,7 +295,7 @@ directory</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Project Organization</h1>
-        <p>Last updated on 2023-09-23 |
+        <p>Last updated on 2024-01-29 |
         
         <a href="https://github.com/csiro-data-school/good-practices-and-collaboration/edit/main/episodes/05-project_organization.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -420,14 +429,14 @@ subdirectories. The first type are files or groups of files that perform
 the core analysis of the research, such as data cleaning or statistical
 analyses. These files can be thought of as the “scientific guts” of the
 project.</p>
-<p>The second type of file in <code>src</code> is controller or driver
-scripts that contains all the analysis steps for the entire project from
-start to finish, with particular parameters and data input/output
-commands. A controller script for a simple project, for example, may
-read a raw data table, import and apply several cleanup and analysis
-functions from the other files in this directory, and create and save a
-numeric result. For a small project with one main output, a single
-controller script should be placed in the main <code>src</code>
+<p>Another type of file that might go in <code>src</code> is
+controller/driver/workflow scripts that contain all the analysis steps
+of a project from start to finish, with particular parameters and data
+input/output commands. A controller script for a simple project, for
+example, may read a raw data table, import and apply several cleanup and
+analysis functions from the other files in this directory, and create
+and save a numeric result. For a small project with one main output, a
+single controller script could be placed in the main <code>src</code>
 directory and distinguished clearly by a name such as “runall”. The
 short example below is typical of scripts of this kind; note how it uses
 one variable, <code>TEMP_DIR</code>, to avoid repeating the name of a
@@ -443,11 +452,33 @@ particular directory four times.</p>
 
     echo "Cleaning up..."
     rm -rf $(TEMP_DIR)</code></pre>
+<div id="callout2" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout2"></a>
+</h3>
+<div class="callout-content">
+<p><strong>Important note:</strong> Don’t place information specific to
+your own computer/system or self in these types of files, especially if
+they are being Git-tracked. Use relative paths instead of full paths
+where possible (e.g. input as <code>../data/</code> rather than
+<code>/home/xyz123/project/data</code>). Don’t include any passwords or
+keys.<br>
+If personal or system-specific information is required for your
+workflow, then make use of locally set environment variables and/or
+git-ignored files and then document how to set up these inputs again for
+anyone (or future self) re-using your work.</p>
+</div>
+</div>
+</div>
 </section><section id="put-compiled-programs-in-the-bin-directory"><h2 class="section-heading">Put compiled programs in the <code>bin</code> directory<a class="anchor" aria-label="anchor" href="#put-compiled-programs-in-the-bin-directory"></a>
 </h2>
-<hr class="half-width"><p><code>bin</code> contains executable programs compiled from code in
-the <code>src</code> directory. Projects that do not have any will not
-require <code>bin</code>.</p>
+<hr class="half-width"><p>A directory named <code>bin</code> is usually used to contain
+executable programs compiled from code in the <code>src</code>
+directory. Projects that do not have any will not require
+<code>bin</code>.</p>
 <blockquote>
 <p><strong>Scripts vs. Programs</strong></p>
 <p>We use the term “script” to mean “something that is executed directly
@@ -490,9 +521,9 @@ change as the project evolves.</p>
 <hr class="half-width"><p>The diagram below provides a concrete example of how a simple project
 might be organized following these recommendations:</p>
 <pre><code>    .
-    |-- CITATION
-    |-- README
-    |-- LICENSE
+    |-- CITATION.cff
+    |-- README.md
+    |-- LICENSE.md
     |-- requirements.txt
     |-- data
     |   -- birds_count_table.csv
@@ -580,7 +611,7 @@ conventions?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul><li>Using dates up front makes it difficult to quickly find data for
 particular conditions or genotypes. It also masks the “logical” order of
@@ -717,8 +748,8 @@ material gives a slightly different and also useful perspective.</p>
   "url": "https://csiro-data-school.github.io/good-practices-and-collaboration/05-project_organization.html",
   "identifier": "https://csiro-data-school.github.io/good-practices-and-collaboration/05-project_organization.html",
   "dateCreated": "2020-08-24",
-  "dateModified": "2023-09-23",
-  "datePublished": "2024-01-28"
+  "dateModified": "2024-01-29",
+  "datePublished": "2024-01-29"
 }
 
   </script><script>

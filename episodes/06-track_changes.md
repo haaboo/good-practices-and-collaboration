@@ -217,12 +217,7 @@ approach—the one we use in our own projects–don't just accelerate the
 manual process: they also automate some steps while enforcing others,
 and thereby require less self-discipline for more reliable results.
 
-1. ***Use a version control
-  system***, to manage changes to a
-  project.
-
-Box 2 briefly explains how version control systems work. It's hard to
-know what version control tool is most widely used in research today,
+It's hard to know what version control tool is most widely used in research today,
 but the one that's most talked about is undoubtedly Git. This is largely because of
 GitHub, a popular hosting site that combines the technical infrastructure for collaboration via Git with a
 modern web interface. GitHub is free for public and open source projects
@@ -231,11 +226,11 @@ GitLab is a well-regarded alternative
 that some prefer, because the GitLab platform itself is free and open
 source. Bitbucket provides free hosting
 for both Git and Mercurial repositories, but does not have nearly as
-many scientific users.
+many scientific users.  CSIRO hosts it's own instance of BitBucket for employee use.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Box 2: How Version Control Systems Work
+## How Version Control Systems Work
 
 A version control system stores snapshots of a project's files in a
 repository. Users modify their working copy of the project, and then
@@ -244,7 +239,7 @@ and/or share their work with colleagues. The version control system
 automatically records when the change was made and by whom along with
 the changes themselves.
 
-Crucially, if several people have edited files simultaneously, the
+Crucially for collaboration, if several people have edited files simultaneously, the
 version control system will detect the collision and require them to
 resolve any conflicts before recording the changes. Modern version
 control systems also allow repositories to be synchronized with each

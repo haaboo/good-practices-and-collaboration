@@ -113,14 +113,14 @@ files that perform the core analysis of the research, such as data
 cleaning or statistical analyses. These files can be thought of as
 the "scientific guts" of the project.
 
-The second type of file in `src` is controller or driver scripts
-that contains all the analysis steps for the entire project
+Another type of file that might go in `src` is controller/driver/workflow scripts
+that contain all the analysis steps of a project
 from start to finish, with particular parameters and data
 input/output commands. A controller script for a simple project, for
 example, may read a raw data table, import and apply several cleanup
 and analysis functions from the other files in this directory, and
 create and save a numeric result. For a small project with one main
-output, a single controller script should be placed in the main
+output, a single controller script could be placed in the main
 `src` directory and distinguished clearly by a name such as
 "runall". The short example below is typical of
 scripts of this kind; note how it uses one variable, `TEMP_DIR`, to
@@ -140,9 +140,21 @@ avoid repeating the name of a particular directory four times.
     rm -rf $(TEMP_DIR)
 ```
 
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+**Important note:** Don't place information specific to your own computer/system
+or self in these types of files, especially if they are being Git-tracked. Use 
+relative paths instead of full paths where possible (e.g. input as `../data/` rather
+than `/home/xyz123/project/data`). Don't include any passwords or keys.  
+If personal or system-specific information is required for your workflow, then make 
+use of locally set environment variables and/or git-ignored files and then document 
+how to set up these inputs again for anyone (or future self) re-using your work.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## Put compiled programs in the `bin` directory
 
-`bin` contains
+A directory named `bin` is usually used to contain
 executable programs compiled from code in the `src` directory.
 Projects that do not have any will not require `bin`.
 
@@ -193,9 +205,9 @@ simple project might be organized following these recommendations:
 
 ```
     .
-    |-- CITATION
-    |-- README
-    |-- LICENSE
+    |-- CITATION.cff
+    |-- README.md
+    |-- LICENSE.md
     |-- requirements.txt
     |-- data
     |   -- birds_count_table.csv

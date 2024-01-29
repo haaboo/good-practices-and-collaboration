@@ -198,7 +198,7 @@ tasks in various ways.
 ![](fig/ms-tasks-list-view.png){alt="An example of Teams Tasks list view"}
 
 - [Jira](https://jira.csiro.au/) is another tool supported and deployed in CSIRO. Developed by
-Australian software company [Atlassian](https://www.atlassian.com/software/jira, it allows 
+Australian software company [Atlassian](https://www.atlassian.com/software/jira), it allows 
 tracking of to-do tasks/issues and sub-tasks, lets you assign tasks to people, and lets 
 you track and view tasks in the context of worflows, timelines, and "board" visualisations,
 such as the "Kanban board". Jira can directly integrate with both BitBucket

@@ -117,15 +117,9 @@ Our first alternative will already be familiar to many researchers:
   With the document online, everyone's changes are in one place, and
   hence don't need to be merged manually.
 
-We realize that in many cases, even this solution is asking too much
-from collaborators who see no reason to move forward from desktop GUI
-tools. To satisfy them, the manuscript can be converted to a desktop
-editor file format (e.g., Microsoft Word `.docx` or LibreOffice
-`.odt`) after major changes, then downloaded and saved in the `doc`
-folder. Unfortunately, this means merging some changes and suggestions
-manually, as existing tools cannot always do this automatically when
-switching from a desktop file format to text and back (although
-[Pandoc](https://pandoc.org/) can go a long way).
+This is easy under our current Microsoft Office organisational setup,
+where Word documents (and others) may be converted to shared online 
+documents automatically when sharing through Outlook or Teams.
 
 ## Text-based Documents Under Version Control
 
@@ -192,8 +186,6 @@ In groups, discuss:
 :::::::::::::::::::::::::::::::::::::::::  callout
 
 ## Getting started writing text-based version control
-
-[Version Control with Git](https://swcarpentry.github.io/git-novice/) Carpentries lesson introduces text-based version control, that you could use for a collaborative manuscript.
 
 [Manubot](https://manubot.org) is an open-source system for writing scholarly manuscripts via GitHub, with tutorials.
 

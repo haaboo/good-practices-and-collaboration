@@ -21,7 +21,7 @@ address a backlog of requested work, in short cycles ('sprints'), by breaking
 problems into small tasks, with frequent feedback and result delivery. It is a
 highly iterative approach to planning, that allows for high flexibility and less 
 forward planning. A sprint may last 1-4 weeks, in which time an entire cycle of 
-planning, designing, implmenting, testing and delivering takes place, with small
+planning, designing, implementing, testing and delivering takes place, with small
 tasks hopefully addressed to completion, followed by a review and retrospective 
 that may or may not end up influencing the next sprint cycle.
 
